@@ -1,0 +1,20 @@
+name: 'Docker Login'
+description: 'Log in to a container registry'
+inputs: 
+  username:
+    description: 'Container registry username'
+    required: true
+    default: ''
+  password:
+    description: 'Container registry password'
+    required: true
+    default: ''
+  login-server:
+    description: 'Container registry server url'
+    required: true
+    default: 'https://index.docker.io/v1/'
+branding:
+  color: 'green'
+runs:
+  using: 'node12'
+  main: 'lib/login.js'
