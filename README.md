@@ -2,18 +2,18 @@
 Use this GitHub Action to [log in to a private container registry](https://docs.docker.com/engine/reference/commandline/login/) such as [Azure Container registry](https://azure.microsoft.com/en-us/services/container-registry/). Once login is done, the next set of actions in the workflow can perform tasks such as building, tagging and pushing containers.
 
 ```yaml
-- uses: azure/container-actions/docker-login@v1
+- uses: azure/docker-login@v1
   with:
     username: '<username>'
     password: '<password>'
     loginServer: '<login server>' # default: index.docker.io
     email: '<email id>'
 ```
-Refer to the action metadata file for details about all the inputs: [action.yml](https://github.com/Azure/container-actions/blob/master/docker-login/action.yml)
+Refer to the action metadata file for details about all the inputs: [action.yml](https://github.com/Azure/docker-login/blob/master/action.yml)
 
 ## You can build and push container registry by using the following example
 ```yaml
-- uses: azure/container-actions/docker-login@v1
+- uses: azure/docker-login@v1
       with:
         login-server: contoso.azurecr.io
         username: ${{ secrets.REGISTRY_USERNAME }}
