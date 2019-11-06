@@ -4,10 +4,9 @@ Use this GitHub Action to [log in to a private container registry](https://docs.
 ```yaml
 - uses: azure/docker-login@v1
   with:
+    login-server: '<login server>' # default: index.docker.io
     username: '<username>'
     password: '<password>'
-    loginServer: '<login server>' # default: index.docker.io
-    email: '<email id>'
 ```
 Refer to the action metadata file for details about all the inputs: [action.yml](https://github.com/Azure/docker-login/blob/master/action.yml)
 
