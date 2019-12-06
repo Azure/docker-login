@@ -13,14 +13,14 @@ Refer to the action metadata file for details about all the inputs: [action.yml]
 ## You can build and push container registry by using the following example
 ```yaml
 - uses: azure/docker-login@v1
-      with:
-        login-server: contoso.azurecr.io
-        username: ${{ secrets.REGISTRY_USERNAME }}
-        password: ${{ secrets.REGISTRY_PASSWORD }}
-    
-    - run: |
-        docker build . -t contoso.azurecr.io/k8sdemo:${{ github.sha }}
-        docker push contoso.azurecr.io/k8sdemo:${{ github.sha }}
+  with:
+    login-server: contoso.azurecr.io
+    username: ${{ secrets.REGISTRY_USERNAME }}
+    password: ${{ secrets.REGISTRY_PASSWORD }}
+
+- run: |
+    docker build . -t contoso.azurecr.io/k8sdemo:${{ github.sha }}
+    docker push contoso.azurecr.io/k8sdemo:${{ github.sha }}
 ```
 
 ### Prerequisite
