@@ -11,6 +11,25 @@ Use this GitHub Action to [log in to a private container registry](https://docs.
 ```
 Refer to the action metadata file for details about all the inputs: [action.yml](https://github.com/Azure/docker-login/blob/master/action.yml)
 
+## Logging in to multiple registries
+To log in to multiple registries, simply run this action several times with different credentials; they will accumulate.
+
+```yaml
+- uses: azure/docker-login@v1
+  with:
+    login-server: contoso.azurecr.io
+    username: ${{ secrets.ACR_USERNAME }}
+    password: ${{ secrets.ACR_PASSWORD }}
+- uses: azure/docker-login@v1
+  with:
+    login-server: index.docker.io
+    username: ${{ secrets.DOCKERIO_USERNAME }}
+    password: ${{ secrets.DOCKERIO_PASSWORD }}
+- run: |
+    docker pull contoso.azurecr.io/private/image:latest
+    docker pull private/image:latest
+```
+
 ## You can build and push container registry by using the following example
 ```yaml
 - uses: azure/docker-login@v1
