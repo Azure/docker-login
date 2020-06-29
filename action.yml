@@ -1,5 +1,5 @@
 name: 'Docker Login'
-description: 'Log in to a container registry'
+description: 'Log in to Azure Container Registry (ACR) or any private container registry'
 inputs: 
   username:
     description: 'Container registry username'
