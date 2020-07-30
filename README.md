@@ -10,6 +10,8 @@ Use this GitHub Action to [log in to a private container registry](https://docs.
 ```
 Refer to the action metadata file for details about all the inputs: [action.yml](https://github.com/Azure/docker-login/blob/master/action.yml)
 
+When using the docker-login action, ensure your login-server matches the fully qualified path to your image. You should omit login-server if you are pushing to the default docker hub without a host prefix, for instance, `docker push repo/image`. You'll need to specify a login-server if you are using the fully qualified path: `docker push index.docker.io/repo/image`. 
+
 ## Logging in to multiple registries
 To log in to multiple registries, simply run this action several times with different credentials; they will accumulate.
 
