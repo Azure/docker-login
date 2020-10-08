@@ -1,6 +1,5 @@
 import * as core from '@actions/core';
 import * as io from '@actions/io';
-import { issueCommand } from '@actions/core/lib/command';
 import * as path from 'path';
 import * as fs from 'fs';
 
@@ -43,7 +42,7 @@ async function run() {
     }
     core.debug(`Writing docker config contents to ${dockerConfigPath}`);
     fs.writeFileSync(dockerConfigPath, JSON.stringify(config));
-    issueCommand('set-env', { name: 'DOCKER_CONFIG' }, dirPath);
+    core.exportVariable('DOCKER_CONFIG', dirPath);
     console.log('DOCKER_CONFIG environment variable is set');
 }
 
