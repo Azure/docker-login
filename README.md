@@ -49,6 +49,8 @@ Get the username and password of your container registry and create secrets for 
 
 Now add the username and password as [a secret](https://developer.github.com/actions/managing-workflows/storing-secrets/) in the GitHub repository.
 
+Docker-login action is supported on both 'AzureUSGovernment' or 'AzureChinaCloud'.Login to the respective Azure Cloud before running docker-login action using [Azure Login](https://github.com/Azure/login)
+
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
