@@ -7,7 +7,7 @@ interface dockerConfig {
     auths?: {[key: string]: {auth: string}}
 }
 
-async function run() {
+export async function run() {
     let username = core.getInput('username', { required: true });
     let password = core.getInput('password', { required: true });
     let loginServer = core.getInput('login-server', { required: true });
