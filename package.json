@@ -21,7 +21,7 @@
         "@actions/tool-cache": "^1.0.0"
     },
     "devDependencies": {
-        "@types/node": "^16.18.0",
+        "@types/node": "^18.11.9",
         "jest": "^29.3.1",
         "@types/jest": "^29.2.3",
         "ts-jest": "^29.0.3",
