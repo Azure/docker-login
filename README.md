@@ -2,7 +2,7 @@
 Use this GitHub Action to [log in to a private container registry](https://docs.docker.com/engine/reference/commandline/login/) such as [Azure Container registry](https://azure.microsoft.com/en-us/services/container-registry/). Once login is done, the next set of actions in the workflow can perform tasks such as building, tagging and pushing containers.
 
 ```yaml
-- uses: azure/docker-login@v1
+- uses: azure/docker-login@v2
   with:
     login-server: '<login server>' # default: index.docker.io
     username: '<username>'
@@ -16,12 +16,12 @@ When using the docker-login action, ensure your login-server matches the fully q
 To log in to multiple registries, simply run this action several times with different credentials; they will accumulate.
 
 ```yaml
-- uses: azure/docker-login@v1
+- uses: azure/docker-login@v2
   with:
     login-server: contoso.azurecr.io
     username: ${{ secrets.ACR_USERNAME }}
     password: ${{ secrets.ACR_PASSWORD }}
-- uses: azure/docker-login@v1
+- uses: azure/docker-login@v2
   with:
     login-server: index.docker.io
     username: ${{ secrets.DOCKERIO_USERNAME }}
@@ -33,7 +33,7 @@ To log in to multiple registries, simply run this action several times with diff
 
 ## You can build and push container registry by using the following example
 ```yaml
-- uses: azure/docker-login@v1
+- uses: azure/docker-login@v2
   with:
     login-server: contoso.azurecr.io
     username: ${{ secrets.REGISTRY_USERNAME }}
