@@ -1,3 +1,7 @@
+> **Warning**
+> This project is not maintained anymore. I'll upgrade minimal things to fix vulnerabilities and upgrade nodeJs version for compatibility. Please prefer [github/docker-login](https://github.com/docker/login-action)
+
+
 # Log in to a container registry
 Use this GitHub Action to [log in to a private container registry](https://docs.docker.com/engine/reference/commandline/login/) such as [Azure Container registry](https://azure.microsoft.com/en-us/services/container-registry/). Once login is done, the next set of actions in the workflow can perform tasks such as building, tagging and pushing containers.
 
