@@ -16,9 +16,9 @@
     "author": "GitHub",
     "license": "MIT",
     "dependencies": {
-        "@actions/core": "^1.2.6",
-        "@actions/exec": "^1.0.0",
-        "@actions/tool-cache": "^1.0.0"
+        "@actions/core": "^1.9.1",
+        "@actions/exec": "^1.1.1",
+        "@actions/tool-cache": "^2.0.1"
     },
     "devDependencies": {
         "@types/node": "^20.10.1",
