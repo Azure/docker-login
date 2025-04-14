@@ -1,5 +1,5 @@
 > **Warning**
-> This project is not maintained anymore. I'll upgrade minimal things to fix vulnerabilities and upgrade nodeJs version for compatibility. Please prefer [github/docker-login](https://github.com/docker/login-action)
+> This project is not maintained anymore. I'll upgrade minimal things to fix vulnerabilities and upgrade nodeJs version for compatibility. Please prefer [docker/login-action](https://github.com/docker/login-action)
 
 
 # Log in to a container registry
